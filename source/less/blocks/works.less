@@ -1,0 +1,33 @@
+.works__wrapper {
+  .wrapper();
+}
+
+.works__title {
+  font-family: @font;
+  font-size: 36px;
+  line-height: 60px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.works__item {
+  width: 192px;
+  position: relative;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  color: #444444;
+}
+
+.works__item_leaflet::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: #68b738;
+  background-image: url("../img/advantage-leaf@1x.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
