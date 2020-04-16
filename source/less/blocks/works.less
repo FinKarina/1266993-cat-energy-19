@@ -21,7 +21,7 @@
   color: #444444;
 }
 
-.works__item_leaflet::after {
+.works__item--leaflet::after {
   content: "";
   position: absolute;
   width: 60px;
@@ -30,4 +30,42 @@
   background-image: url("../img/advantage-leaf@1x.png");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+@media (min-width: @tablet-width) {
+  .works__wrapper {
+    width: 708px;
+    min-height: 780px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .works__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .works__item {
+    width: 354px;
+    min-height: 230px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .works__wrapper {
+    width: 1300px;
+    min-height: 432px;
+    padding-left: 110px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .works__item {
+    width: 325px;
+  }
 }
