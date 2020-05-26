@@ -1,0 +1,29 @@
+.slide {
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 242px;
+
+  @media (min-width: @tablet-width) {
+    width: 49%;
+    min-height: 517px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 53%;
+  }
+}
+
+.slide--slim {
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 51%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 47%;
+  }
+}

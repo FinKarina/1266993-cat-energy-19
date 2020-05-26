@@ -1,0 +1,20 @@
+.cat {
+  display: block;
+  position: absolute;
+  width: 311px;
+  min-height: 236px;
+
+  @media (max-width: @mobile-width-only) {
+    left: -18px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 690px;
+    min-height: 517px;
+  }
+}
+
+
+.cat.after {
+  right: 0;
+}

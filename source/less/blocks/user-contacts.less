@@ -1,0 +1,160 @@
+.user-contacts {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 17px;
+  }
+}
+
+.user-contacts__input {
+  .form-value();
+
+  height: 39px;
+  border: solid 1px #cdcdcd;
+  padding-left: 11px;
+  padding-right: 40px;
+
+  @media (min-width: @tablet-width) {
+    height: 47px;
+    padding-left: 20px;
+  }
+}
+
+.user-contacts__input--mail {
+  width: 162px;
+  margin-left: 9px;
+
+  @media (min-width: @tablet-width) {
+    width: 489px;
+    margin-left: 17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 423px;
+    padding-left: 18px;
+  }
+}
+
+.user-contacts__input--phone {
+  margin-left: 8px;
+  width: 146px;
+
+  @media (min-width: @tablet-width) {
+    width: 473px;
+    margin-left: 11px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 412px;
+  }
+}
+
+.user-contacts__icon {
+  position: absolute;
+  top: 2px;
+  left: 246px;
+
+  @media (min-width: @tablet-width) {
+    top: 7px;
+    left: 595px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 8px;
+    left: 532px;
+  }
+}
+
+.user-contacts__title {
+  .form-title();
+
+  position: relative;
+  display: inline-block;
+
+  width: 320px;
+  margin-left: -20px;
+
+  margin-top: 29px;
+  margin-bottom: 34px;
+
+  z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    margin-top: 74px;
+    margin-bottom: 77px;
+    margin-left: -38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 49px;
+  }
+}
+
+.user-contacts__title::after {
+  content: "";
+
+  position: absolute;
+
+  top: 13px;
+
+  height: 3px;
+  width: 100vw;
+
+  left: 50%;
+  transform: translateX(-50%);
+
+  z-index: -1;
+
+  background-color: #68b738;
+
+  @media (min-width: @tablet-width) {
+    top: 23px;
+    left: calc(50% + 13px);
+  }
+
+  @media (min-width: @desktop-width) {
+    left: calc(50% + 29px);
+  }
+}
+
+.user-contacts__title span {
+  display: inline-block;
+  width: 200px;
+  padding-left: 20px;
+
+  background-color: @primary;
+
+  @media (min-width: @tablet-width) {
+    width: 553px;
+    padding-left: 38px;
+  }
+}
+
+.user-contacts__wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 1222px;
+  }
+}
+
+.user-contacts__label {
+  .form-value();
+  position: relative;
+  color: #222222;
+}
+
+.user-contacts__item {
+  margin: 0;
+  margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 2px;
+  }
+}

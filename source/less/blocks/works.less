@@ -1,71 +1,262 @@
+.works {
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: @desktop-width) {
+    width: 1300px;
+  }
+}
+
 .works__wrapper {
   .wrapper();
-}
+  width: 273px;
+  padding-right: 27px;
+  min-height: 415px;
 
-.works__title {
-  font-family: @font;
-  font-size: 36px;
-  line-height: 60px;
-  font-weight: 400;
-  text-align: left;
-}
-
-.works__item {
-  width: 192px;
-  position: relative;
-  font-family: "Arial", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 18px;
-  text-align: left;
-  color: #444444;
-}
-
-.works__item--leaflet::after {
-  content: "";
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  background-color: #68b738;
-  background-image: url("../img/advantage-leaf@1x.png");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-@media (min-width: @tablet-width) {
-  .works__wrapper {
+  @media (min-width: @tablet-width) {
     width: 708px;
     min-height: 780px;
     padding-right: 30px;
     padding-left: 30px;
+    border-bottom: 1px solid @gray;
   }
-}
 
-@media (min-width: @tablet-width) {
-  .works__list {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .works__item {
-    width: 354px;
-    min-height: 230px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .works__wrapper {
-    width: 1300px;
+  @media (min-width: @desktop-width) {
+    width: 1220px;
     min-height: 432px;
-    padding-left: 110px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-bottom: none;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .works__item {
-    width: 325px;
+.works__title {
+  margin: 0;
+  margin-bottom: 30px;
+  padding-top: 18px;
+
+  .title();
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 150px;
+    padding-top: 46px;
+  }
+}
+
+.works__item {
+  width: 194px;
+  min-height: 50px;
+  position: relative;
+  .text();
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 245px;
+    height: 137px;
+    margin-bottom: 182px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    margin: 0;
+  }
+}
+
+.works__item:nth-child(3) {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 69px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
+}
+
+.works__item:nth-child(4) {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 69px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
+}
+
+.works__item--leaflet::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: -3px;
+  left: -79px;
+  background-color: #68b738;
+  background-image: url("../img/advantage-leaf@1x.png");
+  background-repeat: no-repeat;
+  background-position: 5px 5px;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+    top: -78px;
+    left: 0;
+    background-position: 15px 16px;
+  }
+}
+
+.works__item--glass::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: -3px;
+  left: -79px;
+  background-color: #68b738;
+  background-image: url("../img/advantage-powder@1x.png");
+  background-repeat: no-repeat;
+  background-position: 5px 5px;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+    top: -78px;
+    left: 1px;
+    background-position: 15px 16px;
+  }
+}
+
+.works__item--cutlery::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: -3px;
+  left: -79px;
+  background-color: #68b738;
+  background-image: url("../img/advantage-dining@1x.png");
+  background-repeat: no-repeat;
+  background-position: 5px 5px;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+    top: -80px;
+    left: 0;
+    background-position: 15px 16px;
+  }
+}
+
+.works__item--clock::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: -3px;
+  left: -79px;
+  background-color: #68b738;
+  background-image: url("../img/advantage-clock@1x.png");
+  background-repeat: no-repeat;
+  background-position: 5px 5px;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+    top: -80px;
+    left: 1px;
+    background-position: 15px 16px;
+  }
+}
+
+.works__item--leaflet::after {
+  @media (min-width: @tablet-width) {
+    content: "1";
+    position: absolute;
+    width: 71px;
+    height: 228px;
+    top: -119px;
+    left: 118px;
+    font-family: @font;
+    font-size: 281px;
+    font-weight: 400;
+    line-height: 281px;
+    color: #f2f2f2;
+    z-index: -1;
+  }
+}
+
+.works__item--glass::after {
+  @media (min-width: @tablet-width) {
+    content: "2";
+    position: absolute;
+    width: 114px;
+    height: 230px;
+    top: -118px;
+    left: 113px;
+    font-family: @font;
+    font-size: 281px;
+    font-weight: 400;
+    line-height: 281px;
+    color: #f2f2f2;
+    z-index: -1;
+  }
+}
+
+.works__item--cutlery::after {
+  @media (min-width: @tablet-width) {
+    content: "3";
+    position: absolute;
+    width: 113px;
+    height: 233px;
+    top: -119px;
+    left: 113px;
+    font-family: @font;
+    font-size: 281px;
+    font-weight: 400;
+    line-height: 281px;
+    color: #f2f2f2;
+    z-index: -1;
+  }
+}
+
+.works__item--clock::after {
+  @media (min-width: @tablet-width) {
+    content: "4";
+    position: absolute;
+    width: 121px;
+    height: 228px;
+    top: -119px;
+    left: 113px;
+    font-family: @font;
+    font-size: 281px;
+    font-weight: 400;
+    line-height: 281px;
+    color: #f2f2f2;
+    z-index: -1;
+  }
+}
+
+.works__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: flex-end;
+  align-items: flex-end;
+
+  min-height: 293px;
+  margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 628px;
+    min-height: 0;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
   }
 }
