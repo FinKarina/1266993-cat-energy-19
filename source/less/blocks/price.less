@@ -1,0 +1,25 @@
+.price__field {
+  margin-left: auto;
+  text-align: right;
+}
+
+.price__content {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    border-bottom: 1px solid #cdcdcd;
+    padding-bottom: 6px;
+    margin-bottom: 7px;
+    width: 251px;
+
+    @media (min-width: @desktop-width) {
+      width: 171px;
+    }
+  }
+}
+
+.price tbody {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}

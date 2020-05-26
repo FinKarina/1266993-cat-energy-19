@@ -1,0 +1,88 @@
+.range-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: -1px;
+  padding: 29px 39px 36px 43px;
+
+  @media (min-width: @tablet-width) {
+    align-items: center;
+    width: 768px;
+    box-sizing: border-box;
+    padding-bottom: 69px;
+    padding-top: 18px;
+    padding-left: 99px;
+    padding-right: 100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 737px;
+    padding-top: 39px;
+    padding-right: 40px;
+    padding-left: 127px;
+
+    background: linear-gradient(to bottom, #ffffff 0, rgba(255, 255, 255, 0) 0),
+      linear-gradient(to right, #f2f2f2 56%, #eaeaea 44%);
+  }
+}
+
+.range-controls__scale {
+  position: relative;
+  height: 13px;
+  background-color: @primary;
+  width: 84px;
+  border-radius: 6px;
+  border: 1px solid #cdcdcd;
+
+  @media (min-width: @tablet-width) {
+    width: 428px;
+    height: 6px;
+    border: none;
+    border-radius: 2.5px;
+    background-color: #dcdcdc;
+  }
+}
+
+.range-controls__bar {
+  position: absolute;
+  top: 4px;
+  left: 6px;
+  width: 35px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: #68b738;
+
+  @media (min-width: @tablet-width) {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    top: 12.5px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.range-controls__toggle {
+  @media (min-width: @tablet-width) {
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    width: 33px;
+    height: 33px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    border: solid 1px #cdcdcd;
+    border-radius: 50%;
+    background-color: @primary;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+      border: solid 2px #68b738;
+    }
+  }
+}

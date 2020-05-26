@@ -1,46 +1,140 @@
 .page-main {
-  width: 320px;
   margin: 0 auto;
   min-height: 503px;
 }
 
 .page-main__wrapper {
+  position: relative;
+
   display: flex;
   flex-direction: column;
 
   width: 320px;
-  height: 503px;
+  height: 454px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 26px;
+
+  color: @primary;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    width: 709px;
+    height: 786px;
+    padding-left: 29px;
+    padding-right: 30px;
+    padding-top: 59px;
+    color: @black;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    width: 1300px;
+    height: 583px;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+.page-main__wrapper::after {
+  content: "";
+
+  position: absolute;
+  z-index: -1;
+
+  top: 0;
+
+  width: 320px;
+  height: 305px;
 
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-size: 320px 305px;
   background-repeat: no-repeat;
-  background-position: top;
 
-  color: @primary;
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    width: 100%;
+    height: 696px;
+    left: 50%;
+    top: -114px;
+
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-size: 720px 696px;
+    background-repeat: no-repeat;
+    background-color: #5eaa2f;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+    }
+  }
 }
 
 .page-main__title {
-  width: 249px;
-  padding-left: 38px;
-  padding-top: 29px;
-  padding-right: 37px;
+  margin: 0;
+
   font-family: @font;
   font-size: 36px;
   font-weight: 400;
   line-height: 36px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    padding-left: 88px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 109px;
+    padding-left: 120px;
+  }
 }
 
 .page-main__subtitle {
-  width: 198px;
+  margin: 0;
+  margin-top: 26px;
+  margin-bottom: 29px;
+
   font-family: @font;
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
   text-align: center;
+  text-transform: uppercase;
+
+  align-self: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    align-self: flex-start;
+
+    margin-top: 40px;
+    margin-bottom: 19px;
+    padding-left: 89px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 47px;
+    padding-left: 120px;
+  }
 }
 
 .page-main__programs-button {
+  width: 280px;
+  height: 40px;
   font-family: @font;
   font-size: 14px;
   font-weight: 400;
@@ -49,52 +143,48 @@
   color: #ffffff;
   text-transform: uppercase;
   order: 1;
-}
+  align-self: center;
+  background-color: #68b738;
 
-@media (min-width: @tablet-width) {
-  .page-main {
-    width: 768px;
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #5eaa2f;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+
+    width: 245px;
+    height: 52px;
+    top: 287px;
+    left: 119px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 342px;
+    left: 120px;
   }
 }
 
-@media (min-width: @tablet-width) {
-  .page-main__wrapper {
-    width: 709px;
-    height: 867px;
-    padding-left: 29px;
-    padding-right: 30px;
-    padding-top: 61px;
-    background-image: none;
-    color: @black;
-  }
-}
+.page-main__photo {
+  align-self: center;
 
-@media (min-width: @tablet-width) {
-  .page-main__photo {
+  @media (min-width: @tablet-width) {
     width: 709px;
     height: 609px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .page-main {
-    width: 1440px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .page-main__wrapper {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-
-    width: 1440px;
-    height: 696px;
-    margin-top: -80px;
-    padding: 0;
-    background-image: url("../img/index-background-desktop@1x.jpg");
-    background-size: 720px 696px;
-    background-repeat: no-repeat;
-    background-position: right;
+  @media (min-width: @desktop-width) {
+    position: relative;
+    top: 14px;
+    right: 102px;
+    width: 552px;
+    height: 499px;
   }
 }
